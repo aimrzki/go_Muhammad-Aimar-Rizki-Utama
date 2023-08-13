@@ -1,4 +1,4 @@
-# Introduction Golang
+# Basic Programming
 
 Golang
 Merupakan Bahasa open source yang dikembangkan oleh google yang bertujuan untuk memudahkan proses development name tetap simple, handle, dan efisiensi software
