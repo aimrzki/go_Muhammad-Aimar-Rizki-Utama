@@ -107,7 +107,7 @@ Miscellaneous :
 * (&)
 * (* (Pointer))
  
-#Control Structure 
+##Control Structure 
 merupakan  konsep dalam pemrograman yang digunakan untuk mengontrol aliran eksekusi program. Mereka memungkinkan Anda untuk membuat keputusan, mengulang kode, dan mengorganisir aliran program sesuai dengan kebutuhan.
 
 ada beberapa metode yang dapat kita gunakan untuk melakukan brancing bisa menggunakan logika (if else) dan logika(switch)
