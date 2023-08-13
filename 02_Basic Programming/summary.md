@@ -32,8 +32,11 @@ String
 contoh Variabel : var age int
 
 Ada dua cara deklarasi dalam bahasa golang 
-* Long : var age int
-* short : age:=
+* Long : 
+var age int
+
+* short : 
+age:=
 
 Kedua cara di atas valid/ benar tergantung kita lebih nyaman yang mana
 
