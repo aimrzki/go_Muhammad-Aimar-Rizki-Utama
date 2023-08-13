@@ -70,41 +70,41 @@ Aritmatika :
 — (decrement)
 
 Comparision :
-==
-!=
->
-<
->=
-<=
+* ==
+* !=
+* >
+* <
+* >=
+* <=
 
 Logical :
-&&
-||
-!
+* &&
+* ||
+* !
 
 Bitwise :
-&
-|
-^
-<<
->>
+* &
+* |
+* ^
+* <<
+* >>
 
 Assignment :
-=
-+=
--=
-*=
-/=
-%=
-<<=
->>=
-&=
-^=
-!=
+* =
+* +=
+* -=
+* *=
+* /=
+* %=
+* <<=
+* >>=
+* &=
+* ^=
+* !=
 
 Miscellaneous :
-&
-* (Pointer)
+* &
+* * (Pointer)
  
 #Control Structure 
 merupakan  konsep dalam pemrograman yang digunakan untuk mengontrol aliran eksekusi program. Mereka memungkinkan Anda untuk membuat keputusan, mengulang kode, dan mengorganisir aliran program sesuai dengan kebutuhan.
