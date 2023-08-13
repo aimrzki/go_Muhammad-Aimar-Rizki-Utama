@@ -61,50 +61,50 @@ age=10
 Sama seperti bahasa pemrograman lainnya, ada banyak operator yang dapat kita terapkan seperti :
 
 Aritmatika : 
-+ (Penjumlahan)
-- (Pengurangan)
-/ (Pembagian)
-* (Perkalian)
-% (Sisa hasil bagi)
-++ (increment)
-— (decrement)
+(+) (Penjumlahan)
+(-) (Pengurangan)
+(/) (Pembagian)
+(*) (Perkalian)
+(%) (Sisa hasil bagi)
+(++) (increment)
+(—) (decrement)
 
 Comparision :
-* ==
-* !=
-* >
-* <
-* >=
-* <=
+* (==)
+* (!=)
+* (>)
+* (<)
+* (>=)
+* (<=)
 
 Logical :
-* &&
-* ||
-* !
+* (&&)
+* (||)
+* (!)
 
 Bitwise :
-* &
-* |
-* ^
-* <<
-* >>
+* (&)
+* (|)
+* (^)
+* (<<)
+* (>>)
 
 Assignment :
-* =
-* +=
-* -=
-* *=
-* /=
-* %=
-* <<=
-* >>=
-* &=
-* ^=
-* !=
+* (=)
+* (+=)
+* (-=)
+* (*=)
+* (/=)
+* (%=)
+* (<<=)
+* (>>=)
+* (&=)
+* (^=)
+* (!=)
 
 Miscellaneous :
-* &
-* * (Pointer)
+* (&)
+* (* (Pointer))
  
 #Control Structure 
 merupakan  konsep dalam pemrograman yang digunakan untuk mengontrol aliran eksekusi program. Mereka memungkinkan Anda untuk membuat keputusan, mengulang kode, dan mengorganisir aliran program sesuai dengan kebutuhan.
