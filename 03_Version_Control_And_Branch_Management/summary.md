@@ -1,119 +1,29 @@
-# Basic Programming
+# Version Control and Branch Management
+Pengendalian versi dan manajemen cabang adalah konsep penting dalam pengembangan perangkat lunak yang memungkinkan tim untuk berkolaborasi secara efektif, melacak perubahan, dan mengelola evolusi kode. Ringkasan ini memberikan gambaran komprehensif tentang konsep-konsep ini, menyoroti signifikansinya dan implementasi praktisnya.
 
-Golang
-Merupakan Bahasa open source yang dikembangkan oleh google yang bertujuan untuk memudahkan proses development name tetap simple, handle, dan efisiensi software
+## Version Control 
+merupakan sistem yang melacak perubahan pada berkas-berkas dari waktu ke waktu. Ini menawarkan beberapa manfaat, seperti:
+* Pelacakan Riwayat: Pengendalian versi mencatat setiap perubahan yang dilakukan pada berkas, memungkinkan Anda untuk melihat versi sebelumnya dan memahami evolusi kode.
+* Kolaborasi: Beberapa pengembang dapat bekerja pada proyek yang sama secara bersamaan tanpa saling mengganggu perubahan satu sama lain. Konflik dapat dikelola dengan lebih efektif.
+* Pencadangan dan Pemulihan: Dengan pengendalian versi, Anda memiliki salinan aman dari kode Anda. Jika terjadi kesalahan, Anda dapat dengan mudah kembali ke keadaan yang diketahui berfungsi.
 
-Golang sangat bogus untuk menulis lower level programing. Seperti membuat program aplikasi dan system program
+## Konsep Penting
+* Repositori : merupakan lokasi penyimpanan sentral untuk berkas-berkas proyek Anda dan riwayat versinya
+* Commit : mewakili kumpulan perubahan tertentu yang dilakukan pada kode. Ini mencakup pesan yang bermakna yang menjelaskan perubahan tersebut
+* Cabang : merupakan garis pengembangan terpisah yang memungkinkan Anda untuk bekerja pada fitur-fitur baru atau perbaikan bug tanpa memengaruhi kode dasar.
 
-contoh program aplikasi : 
-E-commerce Music Player
-Social Media Apps
+## Manajemen Cabang
+* Cabang Utama (Main/Branch) : Cabang utama umumnya berisi kode yang siap produksi. Pengembang membuat cabang fitur untuk bekerja pada fitur-fitur baru atau perbaikan bug
+* Cabang Fitur : Setiap fitur atau perbaikan baru dikembangkan dalam cabang yang didedikasikan. Setelah selesai, perubahan ini dapat digabungkan kembali ke cabang utama
+* Cabang Rilis (Release Branches): Cabang rilis dibuat untuk mempersiapkan kode untuk rilis versi baru. Ini memungkinkan perbaikan dan pengujian terakhir sebelum implementasi
+* Cabang Perbaikan Cepat (Hotfix Branches): Cabang perbaikan cepat mengatasi masalah kritis pada kode produksi. Perubahan ini dilakukan secara terisolasi dan digabungkan ke cabang utama dan cabang rilis aktif
 
-Contoh System Program : 
-APIs
-Game Engine
-CLI apps
+## Praktik Terbaik 
+* Pesan Commit yang Jelas: Tulis pesan commit yang deskriptif yang menjelaskan tujuan dari perubahan. Ini membantu memahami konteks perubahan kode.
+* Commit yang Sering: Lakukan commit yang lebih kecil dan sering daripada yang besar dan jarang. Ini memudahkan pelacakan perubahan dan pengelolaan konflik.
+* Ulasan Kode: Dorong ulasan kode pada cabang fitur sebelum penggabungan. Ini membantu menjaga kualitas kode dan menemukan potensi masalah lebih awal.
+* Pengujian: Uji setiap fitur atau perbaikan secara terpisah sebelum menggabungkannya ke cabang utama. Praktik integrasi berkelanjutan dapat mengotomatisasi alur kerja pengujian.
 
-## Kenapa Harus Golang ? 
-
-Ada beberapa alasan mengapa kita harus mempelajari golang seperti : 
-
-- Karena golang merupakan bahasa yang simple, dan membuat mengoding menjadi lebih menyenangkan. 
-- Golang memiliki sytaks yang ringan dan memiliki build in concurrency didalamnya.
-- Golang merupakan opensource yang banyak digunakan oleh perusahaan besar sebagai bahasa programing mereka
-
-## Variabel dan Tipe Data
-Variabel adalah tempat untuk menyimpan data. data biasa memiliki nama dan nama digunakan saat kita ingin memanggil data yang ada di dalamnya.
-
-Tipe data yang ada di bahasa golang :  Boolean : True or False
-Numeric : integer, float, dan complex
-String
-
-contoh Variabel : var age int
-
-Ada dua cara deklarasi dalam bahasa golang 
-* Long : var age int
-
-* short : age:=
-
-Kedua cara di atas valid/ benar tergantung kita lebih nyaman yang mana
+Dengan memahami dan menerapkan pengendalian versi serta manajemen cabang yang efektif, tim pengembangan dapat berkolaborasi dengan lebih efisien, mengurangi kesalahan, dan menyederhanakan siklus pengembangan perangkat lunak. Praktik-praktik ini berkontribusi pada produksi kode berkualitas tinggi dan menjaga proyek tetap teratur.
 
 
-Nilai Default
-
-Lalu dalam golang juga ada nilai default value untuk variabel yaitu :  booleans -> false
-floats -> 0.0
-integers-> 0
-strings -> “”
-
-
-const -> merupakan variabel konstan yang tidak dapat diubah, sehingga nilai hanya dimasukan diawal dan tidak bisa diubah
-
-const bisa diinisialisasikan dengan menggunakan 2 cara yaitu :
-
-* single constant : cons pi float = 3.14
-* multiple constant : const( 
-pi float64 = 3.14 
-pi2  
-age=10
-)
-
-## Operator 
-Sama seperti bahasa pemrograman lainnya, ada banyak operator yang dapat kita terapkan seperti :
-
-Aritmatika : 
-(+) (Penjumlahan)
-(-) (Pengurangan)
-(/) (Pembagian)
-(*) (Perkalian)
-(%) (Sisa hasil bagi)
-(++) (increment)
-(—) (decrement)
-
-Comparision :
-* (==)
-* (!=)
-* (>)
-* (<)
-* (>=)
-* (<=)
-
-Logical :
-* (&&)
-* (||)
-* (!)
-
-Bitwise :
-* (&)
-* (|)
-* (^)
-* (<<)
-* (>>)
-
-Assignment :
-* (=)
-* (+=)
-* (-=)
-* (*=)
-* (/=)
-* (%=)
-* (<<=)
-* (>>=)
-* (&=)
-* (^=)
-* (!=)
-
-Miscellaneous :
-* (&)
-* (* (Pointer))
- 
-## Control Structure 
-merupakan  konsep dalam pemrograman yang digunakan untuk mengontrol aliran eksekusi program. Mereka memungkinkan Anda untuk membuat keputusan, mengulang kode, dan mengorganisir aliran program sesuai dengan kebutuhan.
-
-ada beberapa metode yang dapat kita gunakan untuk melakukan brancing bisa menggunakan logika (if else) dan logika(switch)
-
-Perulangan :
-
-Perulangan digunakan untuk mengizinkan code untuk diulang sampai dengan kondisinya terpenuhi. Perulangan dapat kita terapkan dengan menggunakan logika (for)
-
-misal logika untuk mencetak angka yang kurang dari 5 sebagai berikut :   for i:=0;i<5;i++{ fmt.println(i) }
