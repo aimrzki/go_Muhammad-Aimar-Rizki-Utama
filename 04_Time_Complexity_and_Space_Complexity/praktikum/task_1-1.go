@@ -7,7 +7,7 @@ import (
 
 func isPrime(n int) bool {
 	if n <= 1 {
-		return n == 1
+		return false
 	}
 
 	if n <= 3 {
@@ -20,7 +20,7 @@ func isPrime(n int) bool {
 
 	sqrtN := int(math.Sqrt(float64(n)))
 
-	for i := 5; i*i <= n; i += 6 {
+	for i := 5; i <= sqrtN; i += 6 {
 		if n%i == 0 || n%(i+2) == 0 {
 			return false
 		}
