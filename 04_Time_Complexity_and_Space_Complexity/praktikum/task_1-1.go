@@ -2,22 +2,26 @@ package main
 
 import (
 	"fmt"
-	"math/big"
+	"math"
 )
 
-func isPrime(n *big.Int) bool {
-	if n.Cmp(big.NewInt(2)) <= 0 {
-		return n.Cmp(big.NewInt(1)) == 0
+func isPrime(n int) bool {
+	if n <= 1 {
+		return n == 1
 	}
 
-	if n.Bit(0) == 0 {
+	if n <= 3 {
+		return true
+	}
+
+	if n%2 == 0 || n%3 == 0 {
 		return false
 	}
 
-	sqrtN := new(big.Int).Sqrt(n)
+	sqrtN := int(math.Sqrt(float64(n)))
 
-	for i := big.NewInt(3); i.Cmp(sqrtN) <= 0; i.Add(i, big.NewInt(2)) {
-		if new(big.Int).Mod(n, i).Cmp(big.NewInt(0)) == 0 {
+	for i := 5; i*i <= n; i += 6 {
+		if n%i == 0 || n%(i+2) == 0 {
 			return false
 		}
 	}
@@ -26,9 +30,9 @@ func isPrime(n *big.Int) bool {
 }
 
 func main() {
-	fmt.Println(isPrime(big.NewInt(1000000007))) // Menghasilkan true (bilangan prima)
-	fmt.Println(isPrime(big.NewInt(13)))         // Menghasilkan true (bilangan prima)
-	fmt.Println(isPrime(big.NewInt(17)))         // Menghasilkan true (bilangan prima)
-	fmt.Println(isPrime(big.NewInt(20)))         // Menghasilkan false (bukan bilangan prima)
-	fmt.Println(isPrime(big.NewInt(35)))         // Menghasilkan false (bukan bilangan prima)
+	fmt.Println(isPrime(1000000007)) // Menghasilkan true (bilangan prima)
+	fmt.Println(isPrime(13))         // Menghasilkan true (bilangan prima)
+	fmt.Println(isPrime(17))         // Menghasilkan true (bilangan prima)
+	fmt.Println(isPrime(20))         // Menghasilkan false (bukan bilangan prima)
+	fmt.Println(isPrime(35))         // Menghasilkan false (bukan bilangan prima)
 }
