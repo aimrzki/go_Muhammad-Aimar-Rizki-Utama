@@ -3,14 +3,15 @@ Time Complexity : merupakan cara untuk kita dapat memperkirakan waktu yang berja
 
 Contoh Operasi Dominan
 
+```
 func dominant (n int) int {
-* var result int = 0
-* for i:=0 ; i<n; i++{
-* result +=1
-* }
-* result = result +10
-* return result
-*}
+var result int = 0
+for i:=0 ; i<n; i++{
+result +=1
+}
+result = result +10
+return result
+```
 
 Pada kode diatas operasi pada baris ke-4 adalah dominan dan akan dieksekusi sebanyak n kali. Kompleksitas dijelaskan dalam notasi Big-O dalam hal ini O(n) - Kompleksitas Linear
 
