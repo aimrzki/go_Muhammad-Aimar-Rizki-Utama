@@ -25,5 +25,3 @@ merupakan sistem yang melacak perubahan pada berkas-berkas dari waktu ke waktu. 
 * Pengujian: Uji setiap fitur atau perbaikan secara terpisah sebelum menggabungkannya ke cabang utama. Praktik integrasi berkelanjutan dapat mengotomatisasi alur kerja pengujian.
 
 Dengan memahami dan menerapkan pengendalian versi serta manajemen cabang yang efektif, tim pengembangan dapat berkolaborasi dengan lebih efisien, mengurangi kesalahan, dan menyederhanakan siklus pengembangan perangkat lunak. Praktik-praktik ini berkontribusi pada produksi kode berkualitas tinggi dan menjaga proyek tetap teratur.
-
-
