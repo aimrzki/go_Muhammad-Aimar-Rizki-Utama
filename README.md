@@ -19,6 +19,7 @@ Here is a list of assignments I've completed:
 - [Assignment 5: Data Structure ](/05_Data_Structure/summary.md)
 - [Assignment 6: String, Advance Function, Pointer, Method, Struct and Interface ](/06_String_AdvanceFunction_Pointer_Method_StructandInterface/summary.md)
 - [Assignment 7: Recursive, Number Theory, Sorting, and Searching ](/07_Recursive_NumberTheory_Sorting_Searching/summary.md)
+- [Assignment 8: Problem Solving Paradigm](/08_ProblemSolvingParadigm_BruteForceGreedyandDynamicProgramming/summary.md)
 
 
 Feel free to explore each folder to see the code and solutions I've developed for each assignment. If you have any questions or feedback, please don't hesitate to contact me.
