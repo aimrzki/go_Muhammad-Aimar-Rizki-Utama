@@ -1,130 +1,158 @@
-# Data Structure
-Struktur data adalah cara untuk menyimpan, mengelola, dan mengatur data dalam suatu program. Ini seperti wadah yang berisi tipe data yang berbeda, memungkinkan kita untuk melakukan operasi kompleks pada data dengan efisien.
+# Problem Solving Paradigm - Brute Force Greedy and Dynamic Programming
 
-ada beberapa contoh data structure yang ada dalam bahasa golang seperti :
-* Array
-* Slice
-* Map
-* Function
+Outline : 
+* What is Problem Solving Paradigm
+* Brute Force
+* Divide & Conquer
+* Greedy 
+* Dynamic Programming
 
-Mari kita bahas satu persatu 
+## Problem Solving Paradigm
+Problem solving paradigms adalah pendekatan yang biasa digunakan untuk memecahkan masalah dalam:
+* Complete Search (a.k.a Brute Force)
+* Divide and Conquer
+* The Greedy approach
+* Dynamic Programming
 
-## Array
-Array adalah salah satu struktur data dasar dalam bahasa pemrograman, termasuk dalam Golang. Secara sederhana, array adalah kumpulan elemen dengan tipe data yang sama, yang diindeks oleh angka untuk memudahkan aksesnya.
+Setiap Masalah perlu kita selesaikan dengan pendekatan yang sesuai
 
-Contoh Pendeklarasian array
+## Complete Search
+Complete Search (juga dikenal sebagai) Bruteforce adalah metode untuk memecahkan masalah dengan melintasi seluruh ruang pencarian untuk mendapatkan solusi yang diperlukan. Bruteforce terjadi ketika tidak ada algoritma lain yang tersedia. Biasanya mudah ditulis karena lugas. Secara teoritis semua masalah dapat diselesaikan dengan menggunakan pendekatan BruteForce terutama ketika kita memiliki waktu tidak terbatas
 
-```
-var namaArray [ukuran]tipeData
+Contoh : 
 
-```
+Find Max and Min
 
-Lalu untuk mengakses indeks yang ada dalam suatu array kita dapat menggunakan 
-
-```
-namaArray [ukuran]
-```
-
-## Slice
-Slice adalah struktur data dinamis dalam Golang yang memungkinkan Anda membuat potongan fleksibel dari array. Ini adalah alternatif yang lebih kuat daripada array tradisional karena memungkinkan perluasan dan penyusutan ukuran dengan mudah.
-
-Karakteristik Utama Slice :
-* Dinamis : Ukuran slice tidak tetap dan dapat berubah seiring berjalannya program
-* Referensi : Slice adalah referensi ke bagian dari array yang ada, bukan data yang sebenarnya.
-* Sifat Sama dengan Array : Slice dapat diakses menggunakan indeks dan juga mendukung operasi seperti iterasi dan manipulasi elemen.
-* Deklarasi Ringkas: Anda dapat mendeklarasikan slice tanpa harus menentukan ukuran awal.
-* Lebih Fleksibel: Slice lebih cocok untuk kasus di mana ukuran koleksi data mungkin berubah seiring waktu.
-
-Contoh Deklarasi dan Penggunaan Slice
+Problem statment :
+Kita diberikan array A yang mengandung n <= 10.000
 
 ```
-var potongan []int
-
+findMaxMin ([10,7,3,5,8,2,9]) // 10 2
 ```
 
-```
-angka := [5]int{10, 20, 30, 40, 50}
-potongan := angka[1:4] // Ini menghasilkan slice [20, 30, 40]
+## Divide and Conquer
+Divide & Conquer (D&C) adalah paradigma pemecahan masalah di mana suatu masalah dibuat lebih sederhana dengan 'membagi' menjadi bagian-bagian yang lebih kecil dan kemudian menaklukkan setiap bagian. Berikut langkahnya :
+* Devide : membagi masalah yang besar menjadi masalah yang lebih kecil
+* Conquer : ketika masalah sudah cukup kecil untuk diselesaikan langsung selesaikan
+* Combine : jika dibutuhkan maka perlu menggabungkan solusi dari masalah-masalah yang lebih kecil menjadi solusi untuk masalah yang besar
+
+Binary Search
+
+Problem Steatment 
+Diberikan sorted array A, temukan apakah ada bilangan bulat D pada array itu dan kembalikan indeks dari nilai itu
+
+Example :
 
 ```
-
-Membuat slice Baru
-
-```
-potonganBaru := make([]int, 3, 5) // Slice dengan kapasitas 5, tetapi panjang awal 3
+binarySearch ([1,1,3,5,5,6,7],3) // 2
+binarySearch ([12,15,15,19,24,31,53,59,60],53) // 6
+binarySearch ([12,15,15,19,24,31,53,59,60],100) // -1
 ```
 
-## Map
-Map adalah struktur data kunci-nilai dalam Golang yang memungkinkan Anda menghubungkan nilai-nilai dengan kunci-kunci unik. Ini serupa dengan kamus di dunia nyata, di mana Anda dapat mencari nilai berdasarkan kata kunci yang Anda miliki.
-
-Karakteristik Utama Map :
-* Kunci Unik: Setiap kunci dalam map adalah unik, tidak boleh ada kunci yang sama.
-* Tidak Tetap: Ukuran map dapat berubah seiring berjalannya program.
-* Operasi Efisien: Pencarian dan penambahan elemen dalam map dilakukan dengan kecepatan tinggi.
-* Dinamis: Anda dapat menambahkan, mengubah, atau menghapus pasangan kunci-nilai dalam map.
-
-Contoh deklarasi dan Penggunaan Map
-
+Algortima Binary Search :
 ```
-var mahasiswa map[string]int // Kunci: string, Nilai: int
+package main
 
-```
+import "fmt"
 
-```
-mahasiswa = map[string]int{
-    "John": 25,
-    "Alice": 22,
-    "Bob": 24,
+func binarySearch(arr []int, target int) int {
+    left, right := 0, len(arr)-1
+
+    for left <= right {
+        mid := left + (right-left)/2
+
+        if arr[mid] == target {
+            return mid
+        } else if arr[mid] < target {
+            left = mid + 1
+        } else {
+            right = mid - 1
+        }
+    }
+
+    return -1 // Return -1 if the target is not found
 }
-```
 
-```
-mahasiswa["Eva"] = 23 // Menambahkan pasangan kunci-nilai baru atau mengubah nilai Eva
-```
+func main() {
+    sortedArray := []int{2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+    target := 12
 
-```
-delete(mahasiswa, "Alice") // Menghapus pasangan kunci-nilai dengan kunci "Alice"
-```
+    result := binarySearch(sortedArray, target)
 
-```
-umur, ada := mahasiswa["John"] // Mengecek apakah "John" ada dalam map
-```
-
-## Function
-Function adalah blok kode yang dapat dipanggil untuk menjalankan tugas tertentu. Dalam Golang, function adalah unit dasar dalam pemrograman yang memungkinkan Anda memecah kode menjadi bagian-bagian yang terorganisir, memfasilitasi penggunaan kembali kode, dan menjaga struktur yang teratur.
-
-Karakteristik Utama Function :
-* Pemanggilan: Function dipanggil dengan nama fungsinya diikuti oleh tanda kurung, seperti namaFungsi().
-* Argumen: Anda dapat memberikan argumen ke function untuk mengirim data ke dalamnya.
-* Return Value: Function dapat mengembalikan nilai setelah selesai berjalan.
-* Deklarasi: Function dideklarasikan dengan menyebutkan nama, parameter, tipe return value, dan tubuh fungsinya.
-* Paket dan Sifat Publik: Function yang dimaksudkan untuk digunakan di luar paket harus diawali dengan huruf kapital agar dapat diakses dari luar.
-
-Contoh Deklarasi dan Penggunaan Function :
-
-```
-func sapa(nama string) {
-    fmt.Println("Halo, " + nama)
-}
-```
-
-```
-sapa("Alice") // Output: "Halo, Alice"
-
-```
-
-```
-func tambah(a, b int) int {
-    return a + b
+    if result != -1 {
+        fmt.Printf("Target %d found at index %d\n", target, result)
+    } else {
+        fmt.Println("Target not found in the array")
+    }
 }
 
 ```
 
+## Greedy
+sebuah algoritma dikatakan serakah jika membuat pilihan optimal lokal pada setiap langkah dengan harapan pada akhirnya mencapai solusi optimal global. Dalam beberapa kasus, Greedy berhasil - solusinya singkat dan berjalan efisien
+
+Coin Change 
+
+Problem Statment 
+Mengingat jumlah target V sen dan daftar denominasi n koin, yaitu kita memiliki coinValue[i] (dalam sen) untuk jenis koin i E [0..n-1]. berapa jumlah minimum koin yang harus kita gunakan untuk mewakili jumlah V ? Asumsikan bahwa kita memiliki persediaan koin jenis apa pun yang tidak terbatas. Nilai koin = [10,25,5,1]
+
+Exampe 
 ```
-func tambah(a, b int) int {
-    return a + b
+coinChanges(42) // 25 10 5 1 1
+```
+
+## Dynamic Programming
+Dynamic Programming (DP) adalah sebuah metode dalam ilmu komputer dan matematika yang digunakan untuk memecahkan masalah optimasi dengan cara membagi masalah yang kompleks menjadi submasalah yang lebih kecil dan menyimpan solusi dari submasalah-submasalah tersebut untuk menghindari perhitungan berulang yang tidak efisien. DP sangat berguna ketika ada tumpang tindih dalam submasalah yang perlu dipecahkan.
+
+Dalam bahasa pemrograman Go (Golang), Anda dapat menerapkan Dynamic Programming untuk menyelesaikan berbagai masalah yang melibatkan optimasi, seperti mencari nilai maksimal, minimal, atau menghitung berbagai kombinasi.
+
+Berikut ini adalah panduan langkah-demi-langkah dalam menerapkan Dynamic Programming dalam Go:
+
+* Pahami Masalah: Pertama, Anda harus memahami masalah yang ingin Anda selesaikan dan tentukan apa yang ingin Anda optimalkan. Misalnya, apakah Anda mencari solusi terbaik dengan biaya minimum, atau mencari kombinasi maksimal, atau hal lainnya.
+
+* Identifikasi Submasalah: Pisahkan masalah utama menjadi serangkaian submasalah yang lebih kecil. Submasalah-submasalah ini harus memiliki karakteristik tumpang tindih sehingga solusi dari submasalah yang sama tidak perlu dihitung berkali-kali.
+
+* Definisikan Fungsi DP: Tentukan fungsi DP yang akan menghitung solusi optimal dari setiap submasalah. Fungsi ini harus memanfaatkan hasil dari submasalah yang lebih kecil yang telah dipecahkan sebelumnya. Pada tahap ini, Anda perlu mendefinisikan struktur data yang akan digunakan untuk menyimpan hasil DP, seperti array atau map.
+
+* Buat Solusi Berbasis Iterasi: Dalam implementasi DP, Anda akan sering menggunakan pendekatan berbasis iterasi (bottom-up) daripada rekursi (top-down) karena lebih efisien. Anda akan mulai menghitung solusi dari submasalah yang paling kecil dan secara bertahap membangun solusi untuk masalah yang lebih besar.
+
+* Inisialisasi Nilai Awal: Tentukan nilai awal untuk submasalah yang paling sederhana. Ini sering kali merupakan bagian penting dari implementasi DP.
+
+* Iterasi untuk Menghitung Solusi: Gunakan loop untuk mengisi nilai solusi untuk setiap submasalah. Dalam setiap iterasi, Anda akan menggunakan hasil submasalah yang lebih kecil yang telah dihitung sebelumnya.
+
+* Kembalikan Solusi Akhir: Setelah Anda menghitung solusi untuk masalah utama, kembalikan nilai solusi akhir yang diinginkan.]
+
+Contoh penerapan kode untuk mencari bilangan fibonanci :
+
+```
+package main
+
+import "fmt"
+
+func fibonacci(n int) int {
+    if n <= 1 {
+        return n
+    }
+
+    dp := make([]int, n+1)
+    dp[0], dp[1] = 0, 1
+
+    for i := 2; i <= n; i++ {
+        dp[i] = dp[i-1] + dp[i-2]
+    }
+
+    return dp[n]
 }
+
+func main() {
+    n := 6
+    result := fibonacci(n)
+    fmt.Printf("Fibonacci(%d) = %d\n", n, result)
+}
+
 ```
+
+Ingatlah bahwa konsep DP bisa lebih kompleks tergantung pada masalah yang kita hadapi. Jika kita ingin menerapkan DP pada masalah yang lebih rumit, perlu waktu untuk memahami karakteristik submasalah dan menemukan pola tumpang tindih yang dapat membantu kita menghemat waktu perhitungan.
 
 ```
 hasil := tambah(5, 3) // hasil = 8
