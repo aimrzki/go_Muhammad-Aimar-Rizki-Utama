@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32d1af92-2d06-48d3-bc22-06fa211016ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/Prioritas_2-1.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/eksplorasi_1-1.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-1.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-2.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-3.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-4.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10_CleanCode/Praktikum/task_1-1.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10_CleanCode/Praktikum/task_1-2.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_Time_Complexity_and_Space_Complexity/praktikum/task_1-2.go" beforeDir="false" afterPath="$PROJECT_DIR$/04_Time_Complexity_and_Space_Complexity/praktikum/task_1-2.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,31 +37,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go Application",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/aimrzki",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go Application&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/aimrzki&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Go Build.go build eksplorasi_1-1.go">
-    <configuration name="go build Prioritas_2-1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="Go Build.go build task_1-2.go">
+    <configuration name="go build SoalPrioritas_1-1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/Prioritas_2-1.go" />
+      <filePath value="$PROJECT_DIR$/05_Data_Structure/Praktikum/SoalPrioritas_1-1.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build SoalPrioritas_1-2.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_Muhammad-Aimar-Rizki-Utama" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/05_Data_Structure/Praktikum/SoalPrioritas_1-2.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build eksplorasi_1-1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -75,37 +80,29 @@
       <filePath value="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/eksplorasi_1-1.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build prioritas_1-2.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build task_1-1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-2.go" />
+      <filePath value="$PROJECT_DIR$/04_Time_Complexity_and_Space_Complexity/praktikum/task_1-1.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build prioritas_1-3.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build task_1-2.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-3.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build prioritas_1-4.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_Muhammad-Aimar-Rizki-Utama" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-4.go" />
+      <filePath value="$PROJECT_DIR$/10_CleanCode/Praktikum/task_1-2.go" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build task_1-2.go" />
+        <item itemvalue="Go Build.go build SoalPrioritas_1-2.go" />
+        <item itemvalue="Go Build.go build SoalPrioritas_1-1.go" />
+        <item itemvalue="Go Build.go build task_1-1.go" />
         <item itemvalue="Go Build.go build eksplorasi_1-1.go" />
-        <item itemvalue="Go Build.go build Prioritas_2-1.go" />
-        <item itemvalue="Go Build.go build prioritas_1-4.go" />
-        <item itemvalue="Go Build.go build prioritas_1-3.go" />
-        <item itemvalue="Go Build.go build prioritas_1-2.go" />
       </list>
     </recent_temporary>
   </component>
