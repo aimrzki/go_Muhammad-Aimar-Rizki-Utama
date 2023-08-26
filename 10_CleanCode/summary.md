@@ -1,4 +1,4 @@
-# Clean Code dalam Golang: Ringkasan
+# Clean Code
 
 ## Pendahuluan
 
