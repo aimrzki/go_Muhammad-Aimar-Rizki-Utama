@@ -22,6 +22,7 @@ Here is a list of assignments I've completed:
 - [Assignment 8: Problem Solving Paradigm, Brute Force Greedy, and Dynamic Programming](/08_ProblemSolvingParadigm_BruteForceGreedyandDynamicProgramming/summary.md)
 - [Assignment 9: Concurrent Programing](/09_ConcurrentPrograming/summary.md)
 - [Assignment 10: Clean Code](/10_CleanCode/summary.md)
+- [Assignment 11: Databases, DDL, dan DML](/11_Databases_DDL_DML/summary.md)
 
 
 Feel free to explore each folder to see the code and solutions I've developed for each assignment. If you have any questions or feedback, please don't hesitate to contact me.
