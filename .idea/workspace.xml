@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32d1af92-2d06-48d3-bc22-06fa211016ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/Prioritas_2-1.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/eksplorasi_1-1.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-1.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-2.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-3.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-4.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07_Recursive_NumberTheory_Sorting_Searching/praktikum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/07_Recursive_NumberTheory_Sorting_Searching/praktikum/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_String_AdvanceFunction_Pointer_Method_StructandInterface/Praktikum/eksplorasi_1-1.go" beforeDir="false" afterPath="$PROJECT_DIR$/06_String_AdvanceFunction_Pointer_Method_StructandInterface/Praktikum/eksplorasi_1-1.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +45,7 @@
     "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "beta",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
     "last_opened_file_path": "/Users/aimrzki",
@@ -59,13 +53,21 @@
     "node.js.selected.package.eslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RunManager" selected="Go Build.go build eksplorasi_1-1.go">
+  <component name="RunManager" selected="Go Build.go build eksplorasi_1-1.go (1)">
     <configuration name="go build Prioritas_2-1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/Prioritas_2-1.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build eksplorasi_1-1.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_Muhammad-Aimar-Rizki-Utama" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/06_String_AdvanceFunction_Pointer_Method_StructandInterface/Praktikum/eksplorasi_1-1.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build eksplorasi_1-1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -76,37 +78,29 @@
       <filePath value="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/eksplorasi_1-1.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build prioritas_1-2.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build prioritas_1-1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-2.go" />
+      <filePath value="$PROJECT_DIR$/06_String_AdvanceFunction_Pointer_Method_StructandInterface/Praktikum/prioritas_1-1.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build prioritas_1-3.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build prioritas_2-1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-3.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build prioritas_1-4.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_Muhammad-Aimar-Rizki-Utama" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/prioritas_1-4.go" />
+      <filePath value="$PROJECT_DIR$/06_String_AdvanceFunction_Pointer_Method_StructandInterface/Praktikum/prioritas_2-1.go" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build eksplorasi_1-1.go (1)" />
+        <item itemvalue="Go Build.go build prioritas_2-1.go" />
+        <item itemvalue="Go Build.go build prioritas_1-1.go" />
         <item itemvalue="Go Build.go build eksplorasi_1-1.go" />
         <item itemvalue="Go Build.go build Prioritas_2-1.go" />
-        <item itemvalue="Go Build.go build prioritas_1-4.go" />
-        <item itemvalue="Go Build.go build prioritas_1-3.go" />
-        <item itemvalue="Go Build.go build prioritas_1-2.go" />
       </list>
     </recent_temporary>
   </component>

@@ -18,10 +18,10 @@ func (s *student) Encode() string {
 
 	for _, char := range s.name {
 		if char >= 'a' && char <= 'z' {
-			encodedChar := 'a' + (char-'a'+3)%26
+			encodedChar := 'a' + ('z'-char)%26
 			nameEncode += string(encodedChar)
 		} else if char >= 'A' && char <= 'Z' {
-			encodedChar := 'A' + (char-'A'+3)%26
+			encodedChar := 'A' + ('Z'-char)%26
 			nameEncode += string(encodedChar)
 		} else {
 			nameEncode += string(char)
@@ -36,10 +36,10 @@ func (s *student) Decode() string {
 
 	for _, char := range s.nameEncode {
 		if char >= 'a' && char <= 'z' {
-			decodedChar := 'a' + (char-'a'-3+26)%26
+			decodedChar := 'z' - (char-'a')%26
 			nameDecode += string(decodedChar)
 		} else if char >= 'A' && char <= 'Z' {
-			decodedChar := 'A' + (char-'A'-3+26)%26
+			decodedChar := 'Z' - (char-'A')%26
 			nameDecode += string(decodedChar)
 		} else {
 			nameDecode += string(char)
