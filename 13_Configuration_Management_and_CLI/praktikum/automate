@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Navigasi ke direktori "documents"
+cd ~/Documents
+
+# Nama folder dengan spasi
+folder_name="aimar at Thu Aug 31 02:29:41 WIB 2023"
+
+# Mengakses folder utama
+cd "$folder_name"
+echo "Accessing main folder: $(pwd)"
+
+# Mengakses folder about_me dan subfolder personal
+cd "about_me/personal"
+echo "Accessing folder: $(pwd)"
+cat facebook.txt
+
+# Kembali ke folder utama
+cd ../../
+
+# Mengakses folder about_me dan subfolder professional
+cd "about_me/professional"
+echo "Accessing folder: $(pwd)"
+cat linkedin.txt
+
+# Kembali ke folder utama
+cd ../../
+
+# Mengakses folder my_friends
+cd "my_friends"
+echo "Accessing folder: $(pwd)"
+cat list_of_my_friends.txt
+
+# Kembali ke folder utama
+cd ../
+
+# Mengakses folder my_system_info
+cd "my_system_info"
+echo "Accessing folder: $(pwd)"
+cat about_this_laptop.txt
+cat internet_connection.txt
+
+# Kembali ke folder utama
+cd ../
+
