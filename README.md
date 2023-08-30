@@ -23,6 +23,7 @@ Here is a list of assignments I've completed:
 - [Assignment 9: Concurrent Programing](/09_ConcurrentPrograming/summary.md)
 - [Assignment 10: Clean Code](/10_CleanCode/summary.md)
 - [Assignment 11: Databases, DDL, dan DML](/11_Databases_DDL_DML/summary.md)
+- [Assignment 12: Join, Union, Agregasi, Subquery, and Function](/12_Join_Union_Agregasi_Subquery_Function/summary.md)
 
 
 Feel free to explore each folder to see the code and solutions I've developed for each assignment. If you have any questions or feedback, please don't hesitate to contact me.
