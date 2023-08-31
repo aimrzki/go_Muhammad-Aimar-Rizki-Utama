@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 type pair struct {
-	name  string
-	count int
+	name  string // Nama item.
+	count int    // Jumlah kemunculan item.
 }
 
 func MostAppearItem(items []string) []pair {
@@ -20,7 +21,9 @@ func MostAppearItem(items []string) []pair {
 	for name, count := range countMap {
 		pairs = append(pairs, pair{name: name, count: count})
 	}
-
+	sort.SliceStable(pairs, func(i, j int) bool {
+		return pairs[i].count < pairs[j].count
+	})
 	return pairs
 }
 
