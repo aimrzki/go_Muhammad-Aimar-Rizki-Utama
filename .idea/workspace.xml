@@ -52,15 +52,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager" selected="Go Build.go build eksplorasi_1-1.go (1)">
-    <configuration name="go build Prioritas_2-1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_Muhammad-Aimar-Rizki-Utama" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/Prioritas_2-1.go" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Build.go build eksplorasi_1-2.go">
     <configuration name="go build eksplorasi_1-1.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
       <working_directory value="$PROJECT_DIR$" />
@@ -69,37 +61,45 @@
       <filePath value="$PROJECT_DIR$/06_String_AdvanceFunction_Pointer_Method_StructandInterface/Praktikum/eksplorasi_1-1.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build eksplorasi_1-1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build eksplorasi_1-1.go (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/09_ConcurrentPrograming/praktikum/eksplorasi_1-1.go" />
+      <filePath value="$PROJECT_DIR$/07_Recursive_NumberTheory_Sorting_Searching/praktikum/eksplorasi_1-1.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build prioritas_1-1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build eksplorasi_1-2.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/06_String_AdvanceFunction_Pointer_Method_StructandInterface/Praktikum/prioritas_1-1.go" />
+      <filePath value="$PROJECT_DIR$/07_Recursive_NumberTheory_Sorting_Searching/praktikum/eksplorasi_1-2.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build prioritas_2-1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build prioritas_1-2.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/06_String_AdvanceFunction_Pointer_Method_StructandInterface/Praktikum/prioritas_2-1.go" />
+      <filePath value="$PROJECT_DIR$/07_Recursive_NumberTheory_Sorting_Searching/praktikum/prioritas_1-2.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build prioritas_2-1.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_Muhammad-Aimar-Rizki-Utama" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/07_Recursive_NumberTheory_Sorting_Searching/praktikum/prioritas_2-1.go" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build eksplorasi_1-2.go" />
+        <item itemvalue="Go Build.go build prioritas_1-2.go" />
+        <item itemvalue="Go Build.go build prioritas_2-1.go (1)" />
+        <item itemvalue="Go Build.go build eksplorasi_1-1.go (2)" />
         <item itemvalue="Go Build.go build eksplorasi_1-1.go (1)" />
-        <item itemvalue="Go Build.go build prioritas_2-1.go" />
-        <item itemvalue="Go Build.go build prioritas_1-1.go" />
-        <item itemvalue="Go Build.go build eksplorasi_1-1.go" />
-        <item itemvalue="Go Build.go build Prioritas_2-1.go" />
       </list>
     </recent_temporary>
   </component>
