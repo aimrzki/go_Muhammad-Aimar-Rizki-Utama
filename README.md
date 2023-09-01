@@ -1,12 +1,12 @@
-# Bootcamp Assignments - 100% Mastering Golang Programming
+# Alterra Assignments - 100% Mastering Golang Programming
 
-Welcome to my repository for the assignments completed during the *100% Mastering Golang Programming Bootcamp* by *Alterra Academy*.
+Welcome to my repository for the assignments completed during the *100% Mastering Golang Programming* by *Alterra Academy*.
 
-- *Bootcamp:* 100% Mastering Golang Programming by Alterra Academy
+- *Program:* 100% Mastering Golang Programming by Alterra Academy
 - *My Name:* Muhammad Aimar Rizki Utama
-- *Bootcamp Period:* 14 August - 31 December
+- Period:* 14 August - 31 December
 
-In this repository, you will find assignments and projects that I've worked on during the bootcamp. Each folder corresponds to a different assignment or topic, showcasing my progress and skills as I learned the intricacies of Golang programming.
+In this repository, you will find assignments and projects that I've worked on during the MSIB 5 Kampus Merdeka Alterra Academy. Each folder corresponds to a different assignment or topic, showcasing my progress and skills as I learned the intricacies of Golang programming.
 
 ## Assignments
 
@@ -24,6 +24,7 @@ Here is a list of assignments I've completed:
 - [Assignment 10: Clean Code](/10_CleanCode/summary.md)
 - [Assignment 11: Databases, DDL, dan DML](/11_Databases_DDL_DML/summary.md)
 - [Assignment 12: Join, Union, Agregasi, Subquery, and Function](/12_Join_Union_Agregasi_Subquery_Function/summary.md)
+- [Assignment 13: Configuration Management CLI](/13_Configuration_Management_and_CLI/summary.md)
 
 
 Feel free to explore each folder to see the code and solutions I've developed for each assignment. If you have any questions or feedback, please don't hesitate to contact me.
