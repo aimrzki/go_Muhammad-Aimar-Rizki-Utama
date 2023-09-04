@@ -17,8 +17,8 @@ func Frog(jumps []int) int {
 	dp[1] = int(math.Abs(float64(jumps[1] - jumps[0])))
 
 	for i := 2; i < n; i++ {
-		// Hitung biaya melompat dari batu sebelumnya
-		// dan biaya lompat dari batu sebelum yang sebelumnya
+		// Hitung biaya lompat dari batu sebelumnya
+		// dan lompat dari batu sebelum yang sebelumnya
 		dp[i] = min(dp[i-1]+int(math.Abs(float64(jumps[i]-jumps[i-1]))), dp[i-2]+int(math.Abs(float64(jumps[i]-jumps[i-2]))))
 	}
 
