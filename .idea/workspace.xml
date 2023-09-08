@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32d1af92-2d06-48d3-bc22-06fa211016ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/16_intro_echo_golang/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/16_intro_echo_golang/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/16_intro_echo_golang/praktikum/postmanCollection.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/16_intro_echo_golang/praktikum/task_intro_echo_golang.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/16_intro_echo_golang/screenshoot/createNewUser - Post.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/16_intro_echo_golang/screenshoot/deleteUserById - Delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/16_intro_echo_golang/screenshoot/getAllUser - Get.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/16_intro_echo_golang/screenshoot/getAllUserAfterDeleteUserId-3 - Get.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/16_intro_echo_golang/screenshoot/getUserById - Get.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/16_intro_echo_golang/screenshoot/updateUserById - Put.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="32d1af92-2d06-48d3-bc22-06fa211016ea" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
