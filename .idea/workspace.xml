@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32d1af92-2d06-48d3-bc22-06fa211016ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1/config/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1/controllers/blog_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1/controllers/book_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1/controllers/user_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1/models/blog.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1/models/book.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1/models/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_1-1.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_1-2/config/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_1-2/controllers/user_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_1-2/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_1-2/models/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_2-1/config/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_2-1/controllers/book_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_2-1/controllers/user_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_2-1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_2-1/models/book.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_2-1/models/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="32d1af92-2d06-48d3-bc22-06fa211016ea" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

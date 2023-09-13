@@ -1,3 +1,0 @@
-My username: $(whoami)
-With host: $(uname -a)
-
