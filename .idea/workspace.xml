@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32d1af92-2d06-48d3-bc22-06fa211016ea" name="Changes" comment="" />
+    <list default="true" id="32d1af92-2d06-48d3-bc22-06fa211016ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/18_Middleware/praktikum/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,16 +57,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager" selected="Go Build.go build 17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1">
-    <configuration name="go build 16_intro_echo_golang/praktikum" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go_Muhammad-Aimar-Rizki-Utama" />
-      <working_directory value="$PROJECT_DIR$/16_intro_echo_golang" />
-      <kind value="PACKAGE" />
-      <package value="16_intro_echo_golang/praktikum" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/16_intro_echo_golang/praktikum/task_intro_echo_golang.go" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Build.go build praktikum">
     <configuration name="go build 17_ORM_and_Code_Structure/praktikum" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
       <working_directory value="$PROJECT_DIR$/17_ORM_and_Code_Structure" />
@@ -100,13 +94,22 @@
       <filePath value="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_2-1/main.go" />
       <method v="2" />
     </configuration>
+    <configuration name="go build praktikum" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_Muhammad-Aimar-Rizki-Utama" />
+      <working_directory value="$PROJECT_DIR$/18_Middleware/praktikum" />
+      <kind value="PACKAGE" />
+      <package value="praktikum" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/18_Middleware/praktikum/main.go" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build praktikum" />
         <item itemvalue="Go Build.go build 17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1" />
         <item itemvalue="Go Build.go build 17_ORM_and_Code_Structure/praktikum/soalPrioritas_2-1" />
         <item itemvalue="Go Build.go build 17_ORM_and_Code_Structure/praktikum/soalPrioritas_1-2" />
         <item itemvalue="Go Build.go build 17_ORM_and_Code_Structure/praktikum" />
-        <item itemvalue="Go Build.go build 16_intro_echo_golang/praktikum" />
       </list>
     </recent_temporary>
   </component>
