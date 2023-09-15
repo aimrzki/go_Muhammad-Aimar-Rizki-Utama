@@ -29,6 +29,7 @@ Here is a list of assignments I've completed:
 - [Assignment 15: Intro Restful API](/15_intro_restful_api/summary.md)
 - [Assignment 16: Intro Echo Golang](16_intro_echo_golang/summary.md)
 - [Assignment 17: ORM & Code Structure](17_ORM_and_Code_Structure/summary.md)
+- [Assignment 18: Middleware](18_Middleware/summary.md)
 
 
 Feel free to explore each folder to see the code and solutions I've developed for each assignment. If you have any questions or feedback, please don't hesitate to contact me.
