@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "7ef02096-6486-4024-b3cb-eff80225ed60",
-		"name": "New Collection",
+		"name": "Task_skenario_1_2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "25545922",
 		"_collection_link": "https://orange-star-110651.postman.co/workspace/Relaverse-API~685a2065-519c-4cca-856d-ef32037e45a5/collection/25545922-7ef02096-6486-4024-b3cb-eff80225ed60?action=share&source=collection_link&creator=25545922"
@@ -49,6 +49,35 @@
 			"response": []
 		},
 		{
+			"name": "Kirim Postingan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n        \"id\": 2,\n        \"title\": \"qui est esse\",\n        \"body\": \"est rerum tempore vitae\\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\\nqui aperiam non debitis possimus qui neque nisi nulla\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "hapus data",
 			"request": {
 				"method": "DELETE",
@@ -73,7 +102,22 @@
 			"name": "skenario 2 GET",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/client",
+					"protocol": "https",
+					"host": [
+						"virtserver",
+						"swaggerhub",
+						"com"
+					],
+					"path": [
+						"sepulsa",
+						"RentABook-API",
+						"1.0.0",
+						"client"
+					]
+				}
 			},
 			"response": []
 		},
