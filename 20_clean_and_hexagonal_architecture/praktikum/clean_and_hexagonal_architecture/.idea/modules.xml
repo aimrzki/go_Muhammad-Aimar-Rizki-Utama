@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/clean_and_hexagonal_architecture.iml" filepath="$PROJECT_DIR$/.idea/clean_and_hexagonal_architecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Clean_and_Hexagonal_Architecture.iml" filepath="$PROJECT_DIR$/.idea/Clean_and_Hexagonal_Architecture.iml" />
     </modules>
   </component>
 </project>

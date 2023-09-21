@@ -1,7 +1,8 @@
 package config
 
 import (
-	"clean_and_hexagonal_architecture/internal/model"
+	"Clean_and_Hexagonal_Architecture/model"
+	_ "github.com/mattn/go-sqlite3"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
