@@ -17,14 +17,14 @@ func GetUsersController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
 	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
 	var users []models.User
@@ -32,7 +32,7 @@ func GetUsersController(c echo.Context) error {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "success get all users",
+		"message": "sukses mendapatkan semua data user",
 		"users":   users,
 	})
 }
@@ -44,42 +44,42 @@ func GetUserController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
 	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
 	claims, ok := token.Claims.(jwt.MapClaims)
 	if !ok {
-		return echo.NewHTTPError(http.StatusInternalServerError, "Invalid token claims")
+		return echo.NewHTTPError(http.StatusInternalServerError, "Kesalahan dalam token claims")
 	}
 	userID, ok := claims["user_id"].(float64)
 	if !ok {
-		return echo.NewHTTPError(http.StatusInternalServerError, "Invalid user ID in token claims")
+		return echo.NewHTTPError(http.StatusInternalServerError, "Token tidak sesuai dengan user Id")
 	}
 
 	idParam := c.Param("id")
 	id, err := strconv.Atoi(idParam)
 	if err != nil {
-		return echo.NewHTTPError(http.StatusBadRequest, "Invalid ID")
+		return echo.NewHTTPError(http.StatusBadRequest, "Id salah / tidak ditemukan")
 	}
 
 	if int(userID) != id {
-		return echo.NewHTTPError(http.StatusForbidden, "You are not authorized to access this user data")
+		return echo.NewHTTPError(http.StatusForbidden, "Anda tidak memiliki akses untuk mengakses data ini")
 	}
 
 	var user models.User
 	if err := config.DB.First(&user, id).Error; err != nil {
-		return echo.NewHTTPError(http.StatusNotFound, "User not found")
+		return echo.NewHTTPError(http.StatusNotFound, "User tidak ditemukan")
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "success get user",
+		"message": "sukses mendapatkan data user",
 		"user":    user,
 	})
 }
@@ -95,11 +95,11 @@ func CreateUserController(c echo.Context) error {
 	}
 	token, err := authentication.CreateJWTToken(user.ID)
 	if err != nil {
-		return echo.NewHTTPError(http.StatusInternalServerError, "Failed to create JWT token")
+		return echo.NewHTTPError(http.StatusInternalServerError, "Gagal dalam pembuatan JWT token")
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "success create new user",
+		"message": "berhasil membuat akun",
 		"user":    user,
 		"token":   token,
 	})
@@ -116,20 +116,20 @@ func LoginUserController(c echo.Context) error {
 
 	var user models.User
 	if err := config.DB.Where("email = ?", request.Email).First(&user).Error; err != nil {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid email or password")
+		return echo.NewHTTPError(http.StatusUnauthorized, " email atau password tidak sesuai")
 	}
 
 	if user.Password != request.Password {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid email or password")
+		return echo.NewHTTPError(http.StatusUnauthorized, "email atau password tidak sesuai")
 	}
 
 	token, err := authentication.CreateJWTToken(user.ID)
 	if err != nil {
-		return echo.NewHTTPError(http.StatusInternalServerError, "Failed to create JWT token")
+		return echo.NewHTTPError(http.StatusInternalServerError, "Gagal dalam pembuatan JWT token")
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "Login successful",
+		"message": "Login berhasil",
 		"user_id": user.ID,
 		"token":   token,
 	})
@@ -142,38 +142,38 @@ func DeleteUserController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
 	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
 	claims, ok := token.Claims.(jwt.MapClaims)
 	if !ok {
-		return echo.NewHTTPError(http.StatusInternalServerError, "Invalid token claims")
+		return echo.NewHTTPError(http.StatusInternalServerError, "Kesalahan dalam token claims")
 	}
 	userID, ok := claims["user_id"].(float64)
 	if !ok {
-		return echo.NewHTTPError(http.StatusInternalServerError, "Invalid user ID in token claims")
+		return echo.NewHTTPError(http.StatusInternalServerError, "Kesalahan user ID dalam token claims")
 	}
 
 	idParam := c.Param("id")
 	id, err := strconv.Atoi(idParam)
 	if err != nil {
-		return echo.NewHTTPError(http.StatusBadRequest, "Invalid ID")
+		return echo.NewHTTPError(http.StatusBadRequest, "ID salah / tidak ditemukan")
 	}
 
 	if int(userID) != id {
-		return echo.NewHTTPError(http.StatusForbidden, "You are not authorized to delete this user account")
+		return echo.NewHTTPError(http.StatusForbidden, "Kamu tidak berhak untuk menghapus akun ini")
 	}
 
 	var user models.User
 	if err := config.DB.First(&user, id).Error; err != nil {
-		return echo.NewHTTPError(http.StatusNotFound, "User not found")
+		return echo.NewHTTPError(http.StatusNotFound, "User tidak ditemukan")
 	}
 
 	if err := config.DB.Delete(&user).Error; err != nil {
@@ -181,7 +181,7 @@ func DeleteUserController(c echo.Context) error {
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "success delete user",
+		"message": "sukses menghapus akun",
 	})
 }
 
@@ -192,23 +192,23 @@ func UpdateUserController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
 	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Kesalahan authorization token")
 	}
 
 	claims, ok := token.Claims.(jwt.MapClaims)
 	if !ok {
-		return echo.NewHTTPError(http.StatusInternalServerError, "Invalid token claims")
+		return echo.NewHTTPError(http.StatusInternalServerError, "Kesalahan token claims")
 	}
 	userID, ok := claims["user_id"].(float64)
 	if !ok {
-		return echo.NewHTTPError(http.StatusInternalServerError, "Invalid user ID in token claims")
+		return echo.NewHTTPError(http.StatusInternalServerError, "Kesalahan user ID dalam token claims")
 	}
 
 	idParam := c.Param("id")
@@ -218,7 +218,7 @@ func UpdateUserController(c echo.Context) error {
 	}
 
 	if int(userID) != id {
-		return echo.NewHTTPError(http.StatusForbidden, "You are not authorized to update this user account")
+		return echo.NewHTTPError(http.StatusForbidden, "Anda tidak di izinkan untuk mengubah data ini")
 	}
 
 	user := new(models.User)
@@ -228,7 +228,7 @@ func UpdateUserController(c echo.Context) error {
 
 	var existingUser models.User
 	if err := config.DB.First(&existingUser, id).Error; err != nil {
-		return echo.NewHTTPError(http.StatusNotFound, "User not found")
+		return echo.NewHTTPError(http.StatusNotFound, "User tidak ditemukan")
 	}
 
 	existingUser.Name = user.Name
@@ -240,7 +240,7 @@ func UpdateUserController(c echo.Context) error {
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "success update user",
+		"message": "sukses mengupdate data user",
 		"user":    existingUser,
 	})
 }
