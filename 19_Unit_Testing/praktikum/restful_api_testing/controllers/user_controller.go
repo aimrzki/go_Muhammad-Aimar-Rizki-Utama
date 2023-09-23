@@ -1,9 +1,7 @@
 package controllers
 
 import (
-	"fmt"
 	"github.com/dgrijalva/jwt-go"
-	"github.com/jinzhu/gorm"
 	"github.com/labstack/echo"
 	"net/http"
 	"restful_api_testing/authentication"
@@ -11,28 +9,6 @@ import (
 	"restful_api_testing/models"
 	"strconv"
 )
-
-var DB *gorm.DB
-
-func init() {
-	InitDB()
-}
-
-func InitDB() {
-	config := config.LoadConfig()
-	connectionString := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local",
-		config.DB_Username,
-		config.DB_Password,
-		config.DB_Host,
-		config.DB_Port,
-		config.DB_Name,
-	)
-	var err error
-	DB, err = gorm.Open("mysql", connectionString)
-	if err != nil {
-		panic(err)
-	}
-}
 
 func GetUsersController(c echo.Context) error {
 	authorization := c.Request().Header.Get("Authorization")
@@ -52,7 +28,7 @@ func GetUsersController(c echo.Context) error {
 	}
 
 	var users []models.User
-	if err := DB.Find(&users).Error; err != nil {
+	if err := config.DB.Find(&users).Error; err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 	return c.JSON(http.StatusOK, map[string]interface{}{
@@ -98,7 +74,7 @@ func GetUserController(c echo.Context) error {
 	}
 
 	var user models.User
-	if err := DB.First(&user, id).Error; err != nil {
+	if err := config.DB.First(&user, id).Error; err != nil {
 		return echo.NewHTTPError(http.StatusNotFound, "User not found")
 	}
 
@@ -114,7 +90,7 @@ func CreateUserController(c echo.Context) error {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 
-	if err := DB.Create(user).Error; err != nil {
+	if err := config.DB.Create(user).Error; err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 	token, err := authentication.CreateJWTToken(user.ID)
@@ -139,7 +115,7 @@ func LoginUserController(c echo.Context) error {
 	}
 
 	var user models.User
-	if err := DB.Where("email = ?", request.Email).First(&user).Error; err != nil {
+	if err := config.DB.Where("email = ?", request.Email).First(&user).Error; err != nil {
 		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid email or password")
 	}
 
@@ -196,11 +172,11 @@ func DeleteUserController(c echo.Context) error {
 	}
 
 	var user models.User
-	if err := DB.First(&user, id).Error; err != nil {
+	if err := config.DB.First(&user, id).Error; err != nil {
 		return echo.NewHTTPError(http.StatusNotFound, "User not found")
 	}
 
-	if err := DB.Delete(&user).Error; err != nil {
+	if err := config.DB.Delete(&user).Error; err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 
@@ -251,7 +227,7 @@ func UpdateUserController(c echo.Context) error {
 	}
 
 	var existingUser models.User
-	if err := DB.First(&existingUser, id).Error; err != nil {
+	if err := config.DB.First(&existingUser, id).Error; err != nil {
 		return echo.NewHTTPError(http.StatusNotFound, "User not found")
 	}
 
@@ -259,7 +235,7 @@ func UpdateUserController(c echo.Context) error {
 	existingUser.Email = user.Email
 	existingUser.Password = user.Password
 
-	if err := DB.Save(&existingUser).Error; err != nil {
+	if err := config.DB.Save(&existingUser).Error; err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 

@@ -5,45 +5,38 @@ import (
 	"github.com/labstack/echo"
 	"net/http"
 	"praktikum/authentication"
+	"praktikum/config"
 	"praktikum/models"
 	"strconv"
 )
 
-// Fungsi Untuk menampilkan semua daftar buku
 func GetAllBooksController(c echo.Context) error {
-	// Mendapatkan token autorisasi dari header atau query parameter
 	authorization := c.Request().Header.Get("Authorization")
 	if authorization == "" {
 		authorization = c.QueryParam("token")
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
-
-	// Memeriksa validitas token autorisasi
 	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
-		// Menggunakan kunci rahasia yang sama yang digunakan untuk menandatangani token
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
-	// Jika token valid, dapat dilanjutkan dengan pemrosesan permintaan
-
 	var books []models.Book
-	if err := DB.Find(&books).Error; err != nil {
+	if err := config.DB.Find(&books).Error; err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "success get all books",
+		"message": "Sukses mendapatkan semua data buku",
 		"books":   books,
 	})
 }
 
-// Menampilkan data buku berdasarkan ID
 func GetBookController(c echo.Context) error {
 	authorization := c.Request().Header.Get("Authorization")
 	if authorization == "" {
@@ -51,25 +44,25 @@ func GetBookController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
 	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
 	idParam := c.Param("id")
 	id, err := strconv.Atoi(idParam)
 	if err != nil {
-		return echo.NewHTTPError(http.StatusBadRequest, "Invalid ID")
+		return echo.NewHTTPError(http.StatusBadRequest, "ID salah / tidak ada")
 	}
 
 	var book models.Book
-	if err := DB.First(&book, id).Error; err != nil {
-		return echo.NewHTTPError(http.StatusNotFound, "Book not found")
+	if err := config.DB.First(&book, id).Error; err != nil {
+		return echo.NewHTTPError(http.StatusNotFound, "Buku tidak ditemukan")
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
@@ -78,7 +71,6 @@ func GetBookController(c echo.Context) error {
 	})
 }
 
-// Fungsi untuk membuat buku baru
 func CreateBookController(c echo.Context) error {
 	authorization := c.Request().Header.Get("Authorization")
 	if authorization == "" {
@@ -86,14 +78,14 @@ func CreateBookController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
 	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
 	book := new(models.Book)
@@ -101,7 +93,7 @@ func CreateBookController(c echo.Context) error {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 
-	if err := DB.Create(book).Error; err != nil {
+	if err := config.DB.Create(book).Error; err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 
@@ -111,7 +103,6 @@ func CreateBookController(c echo.Context) error {
 	})
 }
 
-// Fungsi untuk mengubah data buku dengan id
 func UpdateBookController(c echo.Context) error {
 	authorization := c.Request().Header.Get("Authorization")
 	if authorization == "" {
@@ -119,20 +110,20 @@ func UpdateBookController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
 	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
 	idParam := c.Param("id")
 	id, err := strconv.Atoi(idParam)
 	if err != nil {
-		return echo.NewHTTPError(http.StatusBadRequest, "Invalid ID")
+		return echo.NewHTTPError(http.StatusBadRequest, "ID salah / tidak ada")
 	}
 
 	book := new(models.Book)
@@ -141,25 +132,24 @@ func UpdateBookController(c echo.Context) error {
 	}
 
 	var existingBook models.Book
-	if err := DB.First(&existingBook, id).Error; err != nil {
-		return echo.NewHTTPError(http.StatusNotFound, "Book not found")
+	if err := config.DB.First(&existingBook, id).Error; err != nil {
+		return echo.NewHTTPError(http.StatusNotFound, "Buku tidak ditemukan")
 	}
 
 	existingBook.Title = book.Title
 	existingBook.Author = book.Author
 	existingBook.Publisher = book.Publisher
 
-	if err := DB.Save(&existingBook).Error; err != nil {
+	if err := config.DB.Save(&existingBook).Error; err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "success update book",
+		"message": "Sukses update data buku",
 		"book":    existingBook,
 	})
 }
 
-// DeleteBookController menghapus data buku berdasarkan ID
 func DeleteBookController(c echo.Context) error {
 	authorization := c.Request().Header.Get("Authorization")
 	if authorization == "" {
@@ -167,32 +157,32 @@ func DeleteBookController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization dibutuhkan")
 	}
 
 	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
 	idParam := c.Param("id")
 	id, err := strconv.Atoi(idParam)
 	if err != nil {
-		return echo.NewHTTPError(http.StatusBadRequest, "Invalid ID")
+		return echo.NewHTTPError(http.StatusBadRequest, "ID salah / tidak ditemukan")
 	}
 
 	var book models.Book
-	if err := DB.First(&book, id).Error; err != nil {
-		return echo.NewHTTPError(http.StatusNotFound, "Book not found")
+	if err := config.DB.First(&book, id).Error; err != nil {
+		return echo.NewHTTPError(http.StatusNotFound, "Buku tidak ditemukan")
 	}
 
-	if err := DB.Delete(&book).Error; err != nil {
+	if err := config.DB.Delete(&book).Error; err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "success delete book",
+		"message": "Sukses menghapus buku",
 	})
 }
