@@ -1,0 +1,21 @@
+version: "2.1"
+services:
+  db_mysql:
+    image: "mysql:latest"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_DATABASE: "crud_go"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+
+  rest_api-user:
+    image: "backend:v1.0.0"
+    ports:
+      - "8000:8000"
+    environment:
+      DB_ADDRESS: "db_mysql"
+      APIPort: ":8000"
+    depends_on:
+      db_mysql:
+        condition: service_healthy

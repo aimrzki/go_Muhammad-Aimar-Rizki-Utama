@@ -1,0 +1,12 @@
+runtime: go121
+service: alta-aimar-api
+
+env_variables:
+  NODE_ENV: production
+  PORT: 8000
+  VARIABLE_NAME: value
+
+handlers:
+  - url: /.*
+    script: auto
+    secure: always
