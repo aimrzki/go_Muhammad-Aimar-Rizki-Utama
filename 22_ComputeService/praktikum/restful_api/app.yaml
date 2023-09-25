@@ -1,4 +1,4 @@
-runtime: go221
+runtime: go119
 
 runtime_config:
   operating_system: "ubuntu22"
