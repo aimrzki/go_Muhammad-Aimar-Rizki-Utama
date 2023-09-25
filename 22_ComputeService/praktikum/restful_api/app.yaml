@@ -1,13 +1,2 @@
 runtime: go121
 
-runtime_config:
-  operating_system: "ubuntu22"
-  service: aimar-api
-
-handlers:
-  - url: /static
-    static_dir: static
-
-  - url: /.*
-    script: auto
-
