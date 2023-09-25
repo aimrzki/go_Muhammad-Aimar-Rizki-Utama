@@ -1,8 +1,7 @@
-runtime: go
+runtime: go221
 
 runtime_config:
   operating_system: "ubuntu22"
-  runtime_version: "1.21"
   service: aimar-api
 
 handlers:
