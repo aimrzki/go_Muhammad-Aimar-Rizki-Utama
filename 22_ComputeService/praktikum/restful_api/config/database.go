@@ -2,8 +2,8 @@ package config
 
 import (
 	"fmt"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"restful_api_testing/models"
 )
 
@@ -16,10 +16,11 @@ func init() {
 
 func InitDB() {
 	config := LoadConfig()
-	connectionString := fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8&parseTime=True&loc=Local",
+	connectionString := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local",
 		config.DB_Username,
 		config.DB_Password,
 		config.DB_Host,
+		config.DB_Port,
 		config.DB_Name,
 	)
 	var err error
