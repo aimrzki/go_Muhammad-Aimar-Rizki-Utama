@@ -1,6 +1,5 @@
 runtime : go
 env : flex
-service: alta-aimar
 
 runtime_config :
   operating_system: "ubuntu22"
