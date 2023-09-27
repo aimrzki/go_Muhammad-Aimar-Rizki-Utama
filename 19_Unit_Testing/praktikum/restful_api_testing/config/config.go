@@ -14,6 +14,6 @@ func LoadConfig() Config {
 		DB_Password: "",
 		DB_Port:     "3306",
 		DB_Host:     "localhost",
-		DB_Name:     "crud_go",
+		DB_Name:     "crud_go_testing",
 	}
 }
