@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32d1af92-2d06-48d3-bc22-06fa211016ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing/cover.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/18_Middleware/praktikum/Task_Middleware_1_2/controllers/book_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/18_Middleware/praktikum/Task_Middleware_1_2/controllers/book_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/18_Middleware/praktikum/Task_Middleware_1_2/controllers/user_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/18_Middleware/praktikum/Task_Middleware_1_2/controllers/user_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing/controllers/book_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing/controllers/book_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing/controllers/user_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing/controllers/user_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20_Clean_and_Hexagonal_Architecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/20_Clean_and_Hexagonal_Architecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/21_docker/praktikum/restful_api/controllers/book_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/21_docker/praktikum/restful_api/controllers/book_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/21_docker/praktikum/restful_api/controllers/user_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/21_docker/praktikum/restful_api/controllers/user_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/22_ComputeService/praktikum/restful_api/controllers/book_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/22_ComputeService/praktikum/restful_api/controllers/book_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/22_ComputeService/praktikum/restful_api/controllers/user_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/22_ComputeService/praktikum/restful_api/controllers/user_controller.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,59 +57,67 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager" selected="Go Build.go build praktikum">
-    <configuration name="go build 17_ORM_and_Code_Structure/praktikum" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestCreateUserController in restful_api_testing">
+    <configuration name="TestCreateUserController in restful_api_testing" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
-      <working_directory value="$PROJECT_DIR$/17_ORM_and_Code_Structure" />
+      <working_directory value="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing" />
       <kind value="PACKAGE" />
-      <package value="17_ORM_and_Code_Structure/praktikum" />
+      <package value="restful_api_testing" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_1-1.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestCreateUserController\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build 17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestGetUsersController in restful_api_testing" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
-      <working_directory value="$PROJECT_DIR$/17_ORM_and_Code_Structure" />
+      <working_directory value="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing" />
       <kind value="PACKAGE" />
-      <package value="17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1" />
+      <package value="restful_api_testing" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1/main.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestGetUsersController\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build 17_ORM_and_Code_Structure/praktikum/soalPrioritas_1-2" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestGetUsersControllerWithoutAuthorizationCode in restful_api_testing" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
-      <working_directory value="$PROJECT_DIR$/17_ORM_and_Code_Structure" />
+      <working_directory value="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing" />
       <kind value="PACKAGE" />
-      <package value="17_ORM_and_Code_Structure/praktikum/soalPrioritas_1-2" />
+      <package value="restful_api_testing" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_1-2/main.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestGetUsersControllerWithoutAuthorizationCode\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build 17_ORM_and_Code_Structure/praktikum/soalPrioritas_2-1" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go test restful_api_testing" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
-      <working_directory value="$PROJECT_DIR$/17_ORM_and_Code_Structure" />
+      <working_directory value="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing" />
       <kind value="PACKAGE" />
-      <package value="17_ORM_and_Code_Structure/praktikum/soalPrioritas_2-1" />
+      <package value="restful_api_testing" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/17_ORM_and_Code_Structure/praktikum/soalPrioritas_2-1/main.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="go build praktikum" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go test task_simple_unit_testing" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_Muhammad-Aimar-Rizki-Utama" />
-      <working_directory value="$PROJECT_DIR$/18_Middleware/praktikum" />
+      <working_directory value="$PROJECT_DIR$/19_Unit_Testing/praktikum/task_simple_unit_testing" />
       <kind value="PACKAGE" />
-      <package value="praktikum" />
+      <package value="task_simple_unit_testing" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/18_Middleware/praktikum/main.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build praktikum" />
-        <item itemvalue="Go Build.go build 17_ORM_and_Code_Structure/praktikum/soalEksplorasi_1-1" />
-        <item itemvalue="Go Build.go build 17_ORM_and_Code_Structure/praktikum/soalPrioritas_2-1" />
-        <item itemvalue="Go Build.go build 17_ORM_and_Code_Structure/praktikum/soalPrioritas_1-2" />
-        <item itemvalue="Go Build.go build 17_ORM_and_Code_Structure/praktikum" />
+        <item itemvalue="Go Test.TestCreateUserController in restful_api_testing" />
+        <item itemvalue="Go Test.TestGetUsersController in restful_api_testing" />
+        <item itemvalue="Go Test.TestGetUsersControllerWithoutAuthorizationCode in restful_api_testing" />
+        <item itemvalue="Go Test.go test restful_api_testing" />
+        <item itemvalue="Go Test.go test task_simple_unit_testing" />
       </list>
     </recent_temporary>
   </component>
@@ -130,5 +130,12 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/go_Muhammad_Aimar_Rizki_Utama$TestGetUsersController_in_restful_api_testing.out" NAME="TestGetUsersController in restful_api_testing Coverage Results" MODIFIED="1695806875937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/go_Muhammad_Aimar_Rizki_Utama$go_test_restful_api_testing.out" NAME="go test restful_api_testing Coverage Results" MODIFIED="1695806224039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/go_Muhammad_Aimar_Rizki_Utama$go_test_task_simple_unit_testing.out" NAME="go test task_simple_unit_testing Coverage Results" MODIFIED="1695803939048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/go_Muhammad_Aimar_Rizki_Utama$TestGetUsersControllerWithoutAuthorizationCode_in_restful_api_testing.out" NAME="TestGetUsersControllerWithoutAuthorizationCode in restful_api_testing Coverage Results" MODIFIED="1695806852449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/go_Muhammad_Aimar_Rizki_Utama$TestCreateUserController_in_restful_api_testing.out" NAME="TestCreateUserController in restful_api_testing Coverage Results" MODIFIED="1695806904731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
