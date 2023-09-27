@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32d1af92-2d06-48d3-bc22-06fa211016ea" name="Changes" comment="" />
+    <list default="true" id="32d1af92-2d06-48d3-bc22-06fa211016ea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/18_Middleware/praktikum/Task_Middleware_1_2/controllers/book_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/18_Middleware/praktikum/Task_Middleware_1_2/controllers/book_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/18_Middleware/praktikum/Task_Middleware_1_2/controllers/user_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/18_Middleware/praktikum/Task_Middleware_1_2/controllers/user_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing/controllers/book_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing/controllers/book_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing/controllers/user_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/19_Unit_Testing/praktikum/restful_api_testing/controllers/user_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20_Clean_and_Hexagonal_Architecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/20_Clean_and_Hexagonal_Architecture/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/21_docker/praktikum/restful_api/controllers/book_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/21_docker/praktikum/restful_api/controllers/book_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/21_docker/praktikum/restful_api/controllers/user_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/21_docker/praktikum/restful_api/controllers/user_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/22_ComputeService/praktikum/restful_api/controllers/book_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/22_ComputeService/praktikum/restful_api/controllers/book_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/22_ComputeService/praktikum/restful_api/controllers/user_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/22_ComputeService/praktikum/restful_api/controllers/user_controller.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
