@@ -8,6 +8,7 @@ import (
 	"praktikum/config"
 	"praktikum/models"
 	"strconv"
+	"strings"
 )
 
 func GetUsersController(c echo.Context) error {
@@ -20,9 +21,15 @@ func GetUsersController(c echo.Context) error {
 		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
-	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
+	tokenParts := strings.Split(authorization, " ")
+	if len(tokenParts) != 2 || tokenParts[0] != "Bearer" {
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token harus dalam format 'Bearer <token>'")
+	}
+
+	token, err := jwt.Parse(tokenParts[1], func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
+
 	if err != nil || !token.Valid {
 		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
@@ -47,9 +54,15 @@ func GetUserController(c echo.Context) error {
 		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
-	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
+	tokenParts := strings.Split(authorization, " ")
+	if len(tokenParts) != 2 || tokenParts[0] != "Bearer" {
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token harus dalam format 'Bearer <token>'")
+	}
+
+	token, err := jwt.Parse(tokenParts[1], func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
+
 	if err != nil || !token.Valid {
 		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
@@ -145,9 +158,15 @@ func DeleteUserController(c echo.Context) error {
 		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
-	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
+	tokenParts := strings.Split(authorization, " ")
+	if len(tokenParts) != 2 || tokenParts[0] != "Bearer" {
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token harus dalam format 'Bearer <token>'")
+	}
+
+	token, err := jwt.Parse(tokenParts[1], func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
+
 	if err != nil || !token.Valid {
 		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
@@ -195,9 +214,15 @@ func UpdateUserController(c echo.Context) error {
 		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
-	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
+	tokenParts := strings.Split(authorization, " ")
+	if len(tokenParts) != 2 || tokenParts[0] != "Bearer" {
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token harus dalam format 'Bearer <token>'")
+	}
+
+	token, err := jwt.Parse(tokenParts[1], func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
+
 	if err != nil || !token.Valid {
 		return echo.NewHTTPError(http.StatusUnauthorized, "Kesalahan authorization token")
 	}

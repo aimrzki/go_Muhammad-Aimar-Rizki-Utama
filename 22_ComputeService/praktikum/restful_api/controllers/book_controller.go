@@ -8,6 +8,7 @@ import (
 	"restful_api_testing/config"
 	"restful_api_testing/models"
 	"strconv"
+	"strings"
 )
 
 func GetAllBooksController(c echo.Context) error {
@@ -17,14 +18,18 @@ func GetAllBooksController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
+	}
+	tokenParts := strings.Split(authorization, " ")
+	if len(tokenParts) != 2 || tokenParts[0] != "Bearer" {
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token harus dalam format 'Bearer <token>'")
 	}
 
-	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
+	token, err := jwt.Parse(tokenParts[1], func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
 	var books []models.Book
@@ -33,7 +38,7 @@ func GetAllBooksController(c echo.Context) error {
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "success get all books",
+		"message": "Sukses mendapatkan semua data buku",
 		"books":   books,
 	})
 }
@@ -45,25 +50,30 @@ func GetBookController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
-	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
+	tokenParts := strings.Split(authorization, " ")
+	if len(tokenParts) != 2 || tokenParts[0] != "Bearer" {
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token harus dalam format 'Bearer <token>'")
+	}
+
+	token, err := jwt.Parse(tokenParts[1], func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
 	idParam := c.Param("id")
 	id, err := strconv.Atoi(idParam)
 	if err != nil {
-		return echo.NewHTTPError(http.StatusBadRequest, "Invalid ID")
+		return echo.NewHTTPError(http.StatusBadRequest, "ID salah / tidak ada")
 	}
 
 	var book models.Book
 	if err := config.DB.First(&book, id).Error; err != nil {
-		return echo.NewHTTPError(http.StatusNotFound, "Book not found")
+		return echo.NewHTTPError(http.StatusNotFound, "Buku tidak ditemukan")
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
@@ -79,14 +89,19 @@ func CreateBookController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
-	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
+	tokenParts := strings.Split(authorization, " ")
+	if len(tokenParts) != 2 || tokenParts[0] != "Bearer" {
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token harus dalam format 'Bearer <token>'")
+	}
+
+	token, err := jwt.Parse(tokenParts[1], func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
 	book := new(models.Book)
@@ -111,20 +126,25 @@ func UpdateBookController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token dibutuhkan")
 	}
 
-	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
+	tokenParts := strings.Split(authorization, " ")
+	if len(tokenParts) != 2 || tokenParts[0] != "Bearer" {
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token harus dalam format 'Bearer <token>'")
+	}
+
+	token, err := jwt.Parse(tokenParts[1], func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
 	idParam := c.Param("id")
 	id, err := strconv.Atoi(idParam)
 	if err != nil {
-		return echo.NewHTTPError(http.StatusBadRequest, "Invalid ID")
+		return echo.NewHTTPError(http.StatusBadRequest, "ID salah / tidak ada")
 	}
 
 	book := new(models.Book)
@@ -134,7 +154,7 @@ func UpdateBookController(c echo.Context) error {
 
 	var existingBook models.Book
 	if err := config.DB.First(&existingBook, id).Error; err != nil {
-		return echo.NewHTTPError(http.StatusNotFound, "Book not found")
+		return echo.NewHTTPError(http.StatusNotFound, "Buku tidak ditemukan")
 	}
 
 	existingBook.Title = book.Title
@@ -146,7 +166,7 @@ func UpdateBookController(c echo.Context) error {
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "success update book",
+		"message": "Sukses update data buku",
 		"book":    existingBook,
 	})
 }
@@ -158,25 +178,30 @@ func DeleteBookController(c echo.Context) error {
 	}
 
 	if authorization == "" {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token is required")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization dibutuhkan")
 	}
 
-	token, err := jwt.Parse(authorization, func(token *jwt.Token) (interface{}, error) {
+	tokenParts := strings.Split(authorization, " ")
+	if len(tokenParts) != 2 || tokenParts[0] != "Bearer" {
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token harus dalam format 'Bearer <token>'")
+	}
+
+	token, err := jwt.Parse(tokenParts[1], func(token *jwt.Token) (interface{}, error) {
 		return authentication.JwtSecret, nil
 	})
 	if err != nil || !token.Valid {
-		return echo.NewHTTPError(http.StatusUnauthorized, "Invalid authorization token")
+		return echo.NewHTTPError(http.StatusUnauthorized, "Authorization token salah")
 	}
 
 	idParam := c.Param("id")
 	id, err := strconv.Atoi(idParam)
 	if err != nil {
-		return echo.NewHTTPError(http.StatusBadRequest, "Invalid ID")
+		return echo.NewHTTPError(http.StatusBadRequest, "ID salah / tidak ditemukan")
 	}
 
 	var book models.Book
 	if err := config.DB.First(&book, id).Error; err != nil {
-		return echo.NewHTTPError(http.StatusNotFound, "Book not found")
+		return echo.NewHTTPError(http.StatusNotFound, "Buku tidak ditemukan")
 	}
 
 	if err := config.DB.Delete(&book).Error; err != nil {
@@ -184,6 +209,6 @@ func DeleteBookController(c echo.Context) error {
 	}
 
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"message": "success delete book",
+		"message": "Sukses menghapus buku",
 	})
 }
