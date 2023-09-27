@@ -1,10 +1,15 @@
 package routes
 
 import (
+	"github.com/labstack/echo"
+	"io/ioutil"
 	"net/http"
-	"path"
 )
 
-func ServeHTML(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, path.Join(".", "index.html"))
+func ServeHTML(c echo.Context) error {
+	htmlData, err := ioutil.ReadFile("index.html")
+	if err != nil {
+		return err
+	}
+	return c.HTML(http.StatusOK, string(htmlData))
 }
