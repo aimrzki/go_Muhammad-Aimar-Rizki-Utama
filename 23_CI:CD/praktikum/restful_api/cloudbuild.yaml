@@ -1,0 +1,15 @@
+steps:
+  # Menggunakan container Go untuk mengcompile aplikasi Go
+  - name: "gcr.io/cloud-builders/go"
+    args: ["go", "build", "-o", "app"]
+
+  # Menggunakan container GCP untuk melakukan deploy ke App Engine
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      - "app"
+      - "deploy"
+      - "app.yaml"
+    timeout: "1600s"
+
+options:
+  env: ["GO121MODULE=on"]
