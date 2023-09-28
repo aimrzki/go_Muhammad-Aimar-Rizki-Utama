@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alterra - Aimar Task API Documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        pre {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        #navbar {
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            overflow-y: scroll;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        #content {
+            margin-left: 300px;
+        }
+
+        .nav-link {
+            color: #2F4F4F !important;
+        }
+
+        .nav-link:hover {
+            color: #FF6347 !important;
+        }
+
+        #endpoint a {
+            color: #2F4F4F;
+        }
+
+        #endpoint a:hover {
+            color: #FF6347;
+        }
+
+        .anchor:before {
+            content: "";
+            display: block;
+            height: 70px; /* sesuaikan dengan tinggi navbar Anda */
+            margin: -70px 0 0; /* nilainya harus negatif dan sama dengan height */
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
+<div class="container-fluid">
+    <div class="row">
+        <nav id="navbar" class="bd-sidebar">
+            <h1 class="my-4">List API</h1>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="#endpoint">Endpoint</a></li>
+                <li class="nav-item"><a class="nav-link" href="#register_user">Register User</a></li>
+                <li class="nav-item"><a class="nav-link" href="#login_user">Login User</a></li>
+                <li class="nav-item"><a class="nav-link" href="#getAllUsers">Get All User Data</a></li>
+                <li class="nav-item"><a class="nav-link" href="#getUsersById">Get User Data By Id</a></li>
+                <li class="nav-item"><a class="nav-link" href="#editUserById">Edit User Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#delete_User">Delete User</a></li>
+                <li class="nav-item"><a class="nav-link" href="#getAllBooks">Get All Books</a></li>
+                <li class="nav-item"><a class="nav-link" href="#getBooksDataById">Get Book By Id</a></li>
+                <li class="nav-item"><a class="nav-link" href="#editUserById">Edit User Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#create_book">Create New Book</a></li>
+                <li class="nav-item"><a class="nav-link" href="#editBooksByid">Edit Book </a></li>
+                <li class="nav-item"><a class="nav-link" href="#deleteBookById">Delete Book</a></li>
+            </ul>
+        </nav>
+        <div id="content" class="col">
+            <h1 class="my-4">Alterra - Aimar Task API Documentation</h1>
+            <div id="endpoint" class="anchor">
+                <h2 class="my-4">Endpoint</h2>
+                <p><a href="https://alta-aimar.uc.r.appspot.com/">https://alta-aimar.uc.r.appspot.com/</a></p>
+            </div>
+
+            <div id="register_user" class="card mb-4">
+                <div class="card-body">
+                    <h2>Register User</h2>
+                    <p><strong>URL</strong></p>
+                    <p><code>/users</code></p>
+                    <p><strong>Method</strong></p>
+                    <p><code>POST</code></p>
+                    <p><strong>Request Body</strong></p>
+                    <pre>
+    {
+        "name": "string",
+        "email": "string",
+        "password": "string"
+    }
+                        </pre>
+                    <p><strong>Response</strong></p>
+                    <pre>
+    {
+        "error": false,
+        "message": "berhasil membuat akun",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiaWF0IjoxNjg1MjYxNTAxxxxxxxx"
+    }
+                        </pre>
+                </div>
+            </div>
+
+            <div id="login_user" class="card mb-4 anchor">
+                <div class="card-body">
+                    <h2>Login User</h2>
+                    <p><strong>URL</strong></p>
+                    <p><code>/users/login</code></p>
+                    <p><strong>Method</strong></p>
+                    <p><code>POST</code></p>
+                    <p><strong>Request Body</strong></p>
+                    <pre>
+    {
+        "email" : "string",
+        "password" : "string"
+    }
+                        </pre>
+                    <p><strong>Response</strong></p>
+                    <pre>
+    {
+                        "message": "Login berhasil",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTU5MjQxOTQsInVzZXJfaWQiOjJ9.58Qb7MtDE5ozx6gEUlEqg1IB2Xv-NK_7jnTmIdBKGQk",
+    "user_id": 2
+    }
+                        </pre>
+                </div>
+            </div>
+
+            <div id="getAllUsers" class="card mb-4 anchor">
+                <div class="card-body">
+                    <h2>Get All Users Data</h2>
+                    <p><strong>URL</strong></p>
+                    <p><code>/users</code></p>
+                    <p><strong>Method</strong></p>
+                    <p><code>GET</code></p>
+                    <p><strong>Request Body</strong></p>
+                    <p><strong>Note</strong></p>
+                    <p><code>Include authorization token in headers.</code></p>
+                    <p><strong>Response</strong></p>
+                    <pre>
+  {
+    "message": "sukses mendapatkan semua data user",
+    "users": [
+        {
+            "ID": 1,
+            "CreatedAt": "2023-09-25T21:28:27Z",
+            "UpdatedAt": "2023-09-25T21:28:27Z",
+            "DeletedAt": null,
+            "name": "xxx",
+            "email": "xxx@gmail.com",
+            "password": "xxx"
+        }
+    ]
+}
+                        </pre>
+                </div>
+            </div>
+
+            <div id="getUsersById" class="card mb-4 anchor">
+                <div class="card-body">
+                    <h2>Get User Data By Id</h2>
+                    <p><strong>URL</strong></p>
+                    <p><code>/users/:id</code></p>
+                    <p><strong>Method</strong></p>
+                    <p><code>GET</code></p>
+                    <p><strong>Request Body</strong></p>
+                    <p><strong>Note</strong></p>
+                    <p><code>Include authorization token in headers.</code></p>
+                    <p><strong>Response</strong></p>
+                    <pre>
+    {
+        "message": "sukses mendapatkan data user",
+    "users": [
+        {
+            "ID": 1,
+            "CreatedAt": "2023-09-25T21:28:27Z",
+            "UpdatedAt": "2023-09-25T21:28:27Z",
+            "DeletedAt": null,
+            "name": "xxx",
+            "email": "xxx@gmail.com",
+            "password": "xxx"
+        }
+    ]
+    }
+                        </pre>
+                </div>
+            </div>
+
+            <div id="editUserById" class="card mb-4 anchor">
+                <div class="card-body">
+                    <h2>Edit User Data By Id</h2>
+                    <p><strong>URL</strong></p>
+                    <p><code>/users/:id</code></p>
+                    <p><strong>Method</strong></p>
+                    <p><code>PUT</code></p>
+                    <p><strong>Note</strong></p>
+                    <p><code>Include authorization token in headers.</code></p>
+                    <p><strong>Response</strong></p>
+                    <pre>
+    {
+       "message": "sukses mengupdate data user",
+    "user": {
+        "ID": 7,
+        "CreatedAt": "2023-09-27T08:39:58Z",
+        "UpdatedAt": "2023-09-27T08:41:47.814867994Z",
+        "DeletedAt": null,
+        "name": "Muhammad Gilang Wahyu Utama",
+        "email": "gilang@gmail.com",
+        "password": "admin123"
+    }
+    }
+                            </pre>
+                </div>
+            </div>
+
+            <div id="delete_User" class="card mb-4 anchor">
+                <div class="card-body">
+                    <h2>Delete User</h2>
+                    <p><strong>URL</strong></p>
+                    <p><code>/users/:id</code></p>
+                    <p><strong>Method</strong></p>
+                    <p><code>DELETE</code></p>
+                    <p><strong>Request Body</strong></p>
+                    <p><strong>Note</strong></p>
+                    <p><code>Include authorization token in headers.</code></p>
+                    <p><strong>Response</strong></p>
+                    <pre>
+    {
+    "message": "sukses menghapus akun"
+}
+                            </pre>
+                </div>
+            </div>
+
+            <div id="getAllBooks" class="card mb-4 anchor">
+                <div class="card-body">
+                    <h2>Get All Books Data</h2>
+                    <p><strong>URL</strong></p>
+                    <p><code>/books</code></p>
+                    <p><strong>Method</strong></p>
+                    <p><code>GET</code></p>
+                    <p><strong>Note</strong></p>
+                    <p><code>Include authorization token in headers.</code></p>
+                    <p><strong>Response</strong></p>
+                    <pre>
+   {
+    "books": [],
+    "message": "Sukses mendapatkan semua data buku"
+}
+                            </pre>
+                </div>
+            </div>
+
+            <div id="getBooksDataById" class="card mb-4 anchor">
+                <div class="card-body">
+                    <h2>Get Books Data By ID</h2>
+                    <p><strong>URL</strong></p>
+                    <p><code>/books/:Id</code></p>
+                    <p><strong>Method</strong></p>
+                    <p><code>GET</code></p>
+                    <p><strong>Note</strong></p>
+                    <p><code>Include authorization token in headers.</code></p>
+                    <p><strong>Response</strong></p>
+                    <pre>
+    {
+    "book": {
+        "ID": 1,
+        "CreatedAt": "2023-09-27T08:44:27Z",
+        "UpdatedAt": "2023-09-27T08:45:14Z",
+        "DeletedAt": null,
+        "title": "5 cm - sub english",
+        "author": "Francine Jay",
+        "publisher": "Gramedia"
+    },
+    "message": "success get book"
+}
+                            </pre>
+                </div>
+            </div>
+
+            <div id="create_book" class="card mb-4 anchor">
+                <div class="card-body">
+                    <h2>Create New Book</h2>
+                    <p><strong>URL</strong></p>
+                    <p><code>/books</code></p>
+                    <p><strong>Method</strong></p>
+                    <p><code>POST</code></p>
+                    <p><strong>Request Body</strong></p>
+                    <pre>
+  {
+    "title" : "title book",
+    "author" : "author name",
+    "publisher" : "publisher name"
+}
+                            </pre>
+                    <p><strong>Note</strong></p>
+                    <p><code>Include authorization token in headers.</code></p>
+                    <p><strong>Response</strong></p>
+                    <pre>
+  {
+    "book": {
+        "ID": 1,
+        "CreatedAt": "2023-09-27T08:44:27.448058777Z",
+        "UpdatedAt": "2023-09-27T08:44:27.448058777Z",
+        "DeletedAt": null,
+        "title": "tittle book",
+        "author": "author book",
+        "publisher": "publisher book"
+    },
+    "message": "success create new book"
+}
+                            </pre>
+                </div>
+            </div>
+
+            <div id="editBooksByid" class="card mb-4 anchor">
+                <div class="card-body">
+                    <h2>Edit Book Data by Id</h2>
+                    <p><strong>URL</strong></p>
+                    <p><code>/books/:Id</code></p>
+                    <p><strong>Method</strong></p>
+                    <p><code>PUT</code></p>
+                    <p><strong>Request Body</strong></p>
+                    <pre>
+                        {
+    "title" : "tittle book",
+    "author" : "author book",
+    "publisher" : "publisher book"
+}
+                    </pre>
+                    <p><strong>Note</strong></p>
+                    <p><code>Include authorization token in headers.</code></p>
+                    <p><strong>Response</strong></p>
+                    <pre>
+  {
+    "book": {
+        "ID": 1,
+        "CreatedAt": "2023-09-27T08:44:27Z",
+        "UpdatedAt": "2023-09-27T08:45:14.200695041Z",
+        "DeletedAt": null,
+        "title": "tittle book",
+        "author": "author book",
+        "publisher": "publisher book"
+    },
+    "message": "Sukses update data buku"
+}
+                            </pre>
+                </div>
+            </div>
+
+            <div id="deleteBookById" class="card mb-4 anchor">
+                <div class="card-body">
+                    <h2>Delete Book Data by Id</h2>
+                    <p><strong>URL</strong></p>
+                    <p><code>/books/:Id</code></p>
+                    <p><strong>Method</strong></p>
+                    <p><code>DELETE</code></p>
+                    <p><strong>Note</strong></p>
+                    <p><code>Include authorization token in headers.</code></p>
+                    <p><strong>Response</strong></p>
+                    <pre>
+  {
+    "message": "Sukses menghapus buku"
+}
+                            </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
