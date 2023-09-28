@@ -34,7 +34,7 @@ Here is a list of assignments I've completed:
 - [Assignment 20: Clean and Hexagonal Architecture ](20_Clean_and_Hexagonal_Architecture/summary.md)
 - [Assignment 21: Docker](21_docker/summary.md)
 - [Assignment 22: Compute Service](22_ComputeService/summary.md)
-- [Assignment 23: CI/CD](23_CI_CD)
+- [Assignment 23: CI/CD](23_CI_CD/summary.md)
 - [Assignment 24: Introduction AI & OpenAI](24_PerkenalanAidanOpenAi/summary.md)
 
 
