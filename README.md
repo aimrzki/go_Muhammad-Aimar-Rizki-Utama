@@ -36,6 +36,7 @@ Here is a list of assignments I've completed:
 - [Assignment 22: Compute Service](22_ComputeService/summary.md)
 - [Assignment 23: CI/CD](23_CI_CD/summary.md)
 - [Assignment 24: Introduction AI & OpenAI](24_PerkenalanAidanOpenAi/summary.md)
+- [Assignment 25: Algoritma AI](25_AlgoritmaAi/sumarry.md)
 
 
 Feel free to explore each folder to see the code and solutions I've developed for each assignment. If you have any questions or feedback, please don't hesitate to contact me.
