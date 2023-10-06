@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16022ef3-c561-4dea-b7b2-1d855119d2bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../26_PenggunaanAi_di_Golang/praktikum/rekomendasi_laptop/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../26_PenggunaanAi_di_Golang/praktikum/rekomendasi_laptop/handler/laptop_handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../26_PenggunaanAi_di_Golang/praktikum/rekomendasi_laptop/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../26_PenggunaanAi_di_Golang/praktikum/rekomendasi_laptop/usecase/laptop_usecase.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26_PenggunaanAi_di_Golang/praktikum/rekomendasi_laptop/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../26_PenggunaanAi_di_Golang/praktikum/rekomendasi_laptop/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26_PenggunaanAi_di_Golang/praktikum/rekomendasi_laptop/handler/laptop_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/../26_PenggunaanAi_di_Golang/praktikum/rekomendasi_laptop/handler/laptop_handler.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,23 +28,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "beta",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/aimrzki",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;beta&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/aimrzki&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Go Test.go test Clean_and_Hexagonal_Architecture/controller">
     <configuration name="go build Clean_and_Hexagonal_Architecture" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="20_Clean_and_Hexagonal_Architecture" />

@@ -3,10 +3,9 @@ package handler
 
 import (
 	"fmt"
+	"github.com/labstack/echo"
 	"net/http"
 	"os"
-
-	"github.com/labstack/echo"
 	"rekomendasi_laptop/usecase"
 )
 
