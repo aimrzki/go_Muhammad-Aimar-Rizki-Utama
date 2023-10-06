@@ -1,5 +1,11 @@
 package config
 
+import (
+	"github.com/joho/godotenv"
+	"log"
+	"os"
+)
+
 type Config struct {
 	DB_Username string
 	DB_Password string
@@ -9,11 +15,17 @@ type Config struct {
 }
 
 func LoadConfig() Config {
+	// Load variabel lingkungan dari file .env
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatalf("Error loading .env file: %v", err)
+	}
+
 	return Config{
-		DB_Username: "root",
-		DB_Password: "admin123",
-		DB_Port:     "3306",
-		DB_Host:     "34.41.3.178",
-		DB_Name:     "crud_go",
+		DB_Username: os.Getenv("DB_Username"),
+		DB_Password: os.Getenv("DB_Password"),
+		DB_Port:     os.Getenv("DB_Port"),
+		DB_Host:     os.Getenv("DB_Host"),
+		DB_Name:     os.Getenv("DB_Name"),
 	}
 }
