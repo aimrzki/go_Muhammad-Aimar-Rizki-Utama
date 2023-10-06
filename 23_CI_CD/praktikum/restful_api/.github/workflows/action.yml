@@ -1,0 +1,20 @@
+name: 'Google Cloud App Engine Deploy Action'
+description: 'Deploy an application to Google Cloud App Engine'
+
+inputs:
+  service-account-key:
+    description: 'Google Cloud service account key (JSON)'
+    required: true
+  project-id:
+    description: 'Google Cloud Project ID'
+    required: true
+  version:
+    description: 'App Engine version'
+    required: true
+  config:
+    description: 'App Engine configuration file (e.g., app.yaml)'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
