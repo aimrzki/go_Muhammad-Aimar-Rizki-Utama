@@ -13,7 +13,7 @@ func LoadConfig() Config {
 		DB_Username: "root",
 		DB_Password: "admin123",
 		DB_Port:     "3306",
-		DB_Host:     "35.238.117.77",
+		DB_Host:     "34.41.3.178",
 		DB_Name:     "crud_go",
 	}
 }
