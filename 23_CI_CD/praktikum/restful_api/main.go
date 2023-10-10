@@ -13,5 +13,5 @@ func main() {
 	e.GET("/", routes.ServeHTML)
 	routes.SetUserRoutes(e)
 	routes.SetBookRoutes(e)
-	e.Logger.Fatal(e.Start(":8080"))
+	e.Logger.Fatal(e.Start(":8000"))
 }

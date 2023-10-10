@@ -1,8 +1,6 @@
 package config
 
 import (
-	"github.com/joho/godotenv"
-	"log"
 	"os"
 )
 
@@ -16,10 +14,12 @@ type Config struct {
 
 func LoadConfig() Config {
 	// Load variabel lingkungan dari file .env
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatalf("Error loading .env file: %v", err)
-	}
+	/*
+		err := godotenv.Load()
+		if err != nil {
+			log.Fatalf("Error loading .env file: %v", err)
+		}
+	*/
 
 	return Config{
 		DB_Username: os.Getenv("DB_Username"),
